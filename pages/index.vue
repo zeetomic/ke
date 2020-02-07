@@ -79,17 +79,17 @@
               <el-col :span="12">
                 <h3>Address</h3><br>
                 <ul>
-                  <li>
-                    <p class="address">{{ sliceString(portfolio.address) }}</p>
+                  <li v-for="balances in portfolio.balances" :key="balances.balance">
+                    <p v-if="balances.issueTransaction.name">{{ balances.issueTransaction.name }}</p>
+                    <el-divider></el-divider>
                   </li>
                 </ul>
-                <el-divider></el-divider>
               </el-col>
               <el-col :span="12">
                 <h3>Balances</h3><br>
                 <ul>
                   <li v-for="balances in portfolio.balances" :key="balances.balance">
-                    <p>{{ balances.balance / Math.pow(10, 8) }}</p>
+                    <p v-if="balances.balance">{{ balances.balance ? balances.balance/ Math.pow(10, 8) : 0 }}</p>
                     <el-divider></el-divider>
                   </li>
                 </ul>
