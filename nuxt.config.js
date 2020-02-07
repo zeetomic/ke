@@ -57,11 +57,11 @@ export default {
   },
   // PWA
     icon: {
-      iconSrc: './assets/zee_logo.png'
+      iconSrc: './assets/KE.png'
     },
     manifest: {
-      short_name: 'zeetomic',
-      name: 'zeetomic',
+      short_name: 'KE',
+      name: 'KE',
       start_url: '/',
       theme_color: '#15151a',
     },
