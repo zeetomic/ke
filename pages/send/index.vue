@@ -7,7 +7,9 @@
             <h3 slot="title">Please fill the form</h3>
             <div v-if="asset.error">
               <h4 style="color: red">Opp! Look like you don't have wallet yet!</h4>
-              <el-button @click="handleGetwallet()" type="success" plain style="margin-top:1rem;">Get Wallet</el-button>
+              <nuxt-link to="/getwallet">
+                <el-button type="success" plain style="margin-top:1rem;">Get Wallet</el-button>
+              </nuxt-link>
             </div>
             <div v-else>
               <el-form

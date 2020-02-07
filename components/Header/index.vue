@@ -95,7 +95,7 @@ export default {
 }
 .burger {
   display: inline-block;
-  margin-right: 30%;
+  margin-right: 34%;
   cursor: pointer;
 }
 .nav_burger_background {
