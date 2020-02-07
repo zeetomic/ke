@@ -18,8 +18,16 @@
               <span>{{props.row.sender ? sliceString(props.row.sender) : null}}</span>
             </template>
           </el-table-column>
-          <el-table-column prop="amount" label="Amount"></el-table-column>
-          <el-table-column prop="fee" label="Fee"></el-table-column>
+          <el-table-column label="Amount">
+             <template slot-scope="props">
+              <span>{{props.row.amount ? (props.row.amount / Math.pow(10, 8)) : null}}</span>
+            </template>
+          </el-table-column>
+          <el-table-column prop="fee" label="Fee">
+            <template slot-scope="props">
+              <span>{{props.row.fee ? (props.row.fee / Math.pow(10, 8)) : null}}</span>
+            </template>
+          </el-table-column>
           <el-table-column label="Recipient">
             <template slot-scope="props">
               <span>{{props.row.recipient ? sliceString(props.row.recipient) : null}}</span>
@@ -46,11 +54,11 @@
             <template slot-scope="props">
               <div>
                 <el-tag>Amount: </el-tag>
-                <span style="color:#3076bf">{{ props.row.amount }}</span>
+                <span style="color:#3076bf">{{ props.row.amount ? (props.row.amount / Math.pow(10, 8)) : null }}</span>
               </div>
               <div style="padding-top: 5px">
                 <el-tag>Fee: </el-tag>
-                <span style="color:#3076bf">{{ props.row.fee }}</span>
+                <span style="color:#3076bf">{{ props.row.fee ? (props.row.fee / Math.pow(10, 8)) : null }}</span>
               </div>
               <div style="padding-top: 5px">
                 <el-tag>Recipient: </el-tag>

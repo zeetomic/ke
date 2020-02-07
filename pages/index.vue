@@ -13,7 +13,7 @@
                 <div class="welcome">
                   <h2>Welcome to</h2>
                   <h1>KE</h1>
-                  <p>The Platform for the Issuance and Management of Digital Asset.</p>
+                  <p>Khmer Enterprises Wallet.</p>
                 </div>
               </el-col>
             </el-row>
